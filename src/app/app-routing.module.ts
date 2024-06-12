@@ -5,6 +5,7 @@ import { UserComponent } from './user/user.component';
 import { AuthGuard } from './auth.guard';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ProfilKayitComponent } from './profil-kayit/profil-kayit.component';
+import { OgrenciComponent } from './ogrenci/ogrenci.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/ana-sayfa', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent, canActivate: [AuthGuard] },
   { path: 'to-do-list', component: ToDoListComponent},
   { path: 'profil-kayit', component: ProfilKayitComponent,},
+  { path: 'ogrenci', component: OgrenciComponent,},
 ];
 
 @NgModule({

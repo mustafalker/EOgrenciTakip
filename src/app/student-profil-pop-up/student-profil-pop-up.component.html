@@ -1,0 +1,83 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-soft-blue text-white">
+      <h2>Öğrenci Bilgileri</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" [formGroup]="ogrenciForm">
+        <div class="form-grid">
+
+          <div class="form-item">
+            <div class="form-group">
+              <label for="ad">Ad</label>
+              <input type="text" class="form-control" id="ad" placeholder="Adınızı giriniz" formControlName="ad">
+              <div *ngIf="ogrenciForm.controls['ad'].hasError('required')" class="error-text">
+                Ad zorunludur
+              </div>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <div class="form-group">
+              <label for="soyad">Soyad</label>
+              <input type="text" class="form-control" id="soyad" placeholder="Soyadınızı giriniz" formControlName="soyad">
+              <div *ngIf="ogrenciForm.controls['soyad'].hasError('required')" class="error-text">
+                Soyad zorunludur
+              </div>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <div class="form-group">
+              <label for="alan">Alan</label>
+              <select id="alan" class="form-control custom-select" formControlName="alan">
+                <option *ngFor="let alan of alanlar" [value]="alan.alanID">
+                  {{ alan.alanID }}
+                </option>
+              </select>
+              <div *ngIf="ogrenciForm.controls['alan'].hasError('required')" class="error-text">
+                Alan zorunludur
+              </div>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <div class="form-group">
+              <label for="minHedef">Minimum Hedef</label>
+              <input type="number" class="form-control" id="minHedef" placeholder="Minimum hedef giriniz" formControlName="minHedef">
+              <div *ngIf="ogrenciForm.controls['minHedef'].hasError('required')" class="error-text">
+                Minimum hedef zorunludur
+              </div>
+              <div *ngIf="ogrenciForm.controls['minHedef'].hasError('min')" class="error-text">
+                Minimum hedef 0'dan büyük olmalıdır
+              </div>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <div class="form-group">
+              <label for="maxHedef">Maksimum Hedef</label>
+              <input type="number" class="form-control" id="maxHedef" placeholder="Maksimum hedef giriniz" formControlName="maxHedef">
+              <div *ngIf="ogrenciForm.controls['maxHedef'].hasError('required')" class="error-text">
+                Maksimum hedef zorunludur
+              </div>
+              <div *ngIf="ogrenciForm.controls['maxHedef'].hasError('min')" class="error-text">
+                Maksimum hedef minimum hedeften büyük olmalıdır
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="button-group mt-4">
+          <button class="btn btn-primary" type="submit" [disabled]="!ogrenciForm.valid">
+            Kaydet
+          </button>
+          <button class="btn btn-secondary" type="button" (click)="close()">
+            Kapat
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

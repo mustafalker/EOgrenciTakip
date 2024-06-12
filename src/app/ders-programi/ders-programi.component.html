@@ -1,0 +1,20 @@
+<div class="container mt-5">
+          <h2>Ders Programları</h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Ders Adı</th>
+                <th>Gün</th>
+                <th>Saat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dersProgrami of dersProgramlari">
+                <td>{{ dersProgrami.gunlukCalismaSaati }}</td>
+                <td>{{ dersProgrami.dersBilgileri }}</td>
+                <td>{{ dersProgrami.haftadaCalisilacakGunSayisi }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <app-ders-programi [dersProgramlari]="dersProgramlari"></app-ders-programi>

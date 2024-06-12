@@ -1,0 +1,162 @@
+/* Navbar styles */
+.navbar-brand {
+          font-weight: bold;
+          color: #4caf50;
+          /* Custom color */
+        }
+        
+        .nav-link {
+          color: #333;
+        }
+        
+        .nav-link.active {
+          font-weight: bold;
+          color: #4caf50;
+          /* Custom color */
+        }
+        
+        .nav-link:hover {
+          color: #4caf50;
+          /* Custom color */
+        }
+        
+        /* Button styles */
+        .btn-outline-dark {
+          border-color: #4caf50;
+          /* Custom color */
+          color: #4caf50;
+          /* Custom color */
+        }
+        
+        .btn-outline-dark:hover {
+          background-color: #4caf50;
+          /* Custom color */
+          color: #fff;
+        }
+        
+        .btn-outline-danger {
+          border-color: #f44336;
+          /* Custom color */
+          color: #f44336;
+          /* Custom color */
+        }
+        
+        .btn-outline-danger:hover {
+          background-color: #f44336;
+          /* Custom color */
+          color: #fff;
+        }
+        
+        .btn-primary {
+          background-color: #4caf50;
+          /* Custom color */
+          border-color: #4caf50;
+          /* Custom color */
+        }
+        
+        .btn-primary:hover {
+          background-color: #45a049;
+          /* Custom color */
+          border-color: #45a049;
+          /* Custom color */
+        }
+        
+        .btn-complete {
+          background-color: #28a745;
+          /* Custom color */
+          border-color: #28a745;
+          /* Custom color */
+        }
+        
+        .btn-complete:hover {
+          background-color: #218838;
+          /* Custom color */
+          border-color: #218838;
+          /* Custom color */
+        }
+        
+        #popupButton {
+          margin-left: 10px;
+        }
+        
+        /* Table styles */
+        .table {
+          width: 100%;
+          margin-top: 20px;
+        }
+        
+        .table thead th {
+          background-color: #4caf50;
+          /* Custom color */
+          color: white;
+          text-align: center;
+        }
+        
+        .table tbody tr {
+          transition: background-color 0.3s;
+        }
+        
+        .table tbody tr:hover {
+          background-color: #e6ffe6;
+        }
+        
+        /* Custom table styles */
+        .custom-table th,
+        .custom-table td {
+          text-align: center;
+          vertical-align: middle;
+        }
+        
+        .custom-table tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+        
+        .custom-table tbody tr:nth-child(odd) {
+          background-color: #fff;
+        }
+        
+        .custom-table {
+          width: 100%;
+          margin-top: 20px;
+        }
+        
+        .mat-header-cell {
+          background-color: #4caf50;
+          /* Custom color */
+          color: white;
+          text-align: center;
+        }
+        
+        .mat-row:hover {
+          background-color: #e6ffe6;
+        }
+        
+        .mat-cell {
+          text-align: center;
+          vertical-align: middle;
+        }
+        
+        /* Card styles */
+        .card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-title {
+          font-weight: bold;
+          color: #4caf50;
+          /* Custom color */
+        }
+        
+        .card-body p {
+          margin: 0;
+        }
+        

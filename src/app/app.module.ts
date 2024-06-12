@@ -16,10 +16,14 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProfilKayitComponent } from './profil-kayit/profil-kayit.component';
 import { NgbDropdownModule, NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDividerModule } from '@angular/material/divider';
+import { HttpClientModule } from '@angular/common/http';
+import { StudentProfilPopUpComponent } from './student-profil-pop-up/student-profil-pop-up.component';
+import { OgrenciComponent } from './ogrenci/ogrenci.component';
+import { DersProgramiComponent } from './ders-programi/ders-programi.component';
 
 const keycloakService = new KeycloakService();
 
@@ -31,6 +35,9 @@ const keycloakService = new KeycloakService();
     AnaSayfaComponent,
     ToDoListComponent,
     ProfilKayitComponent,
+    StudentProfilPopUpComponent,
+    OgrenciComponent,
+    DersProgramiComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,10 +55,14 @@ const keycloakService = new KeycloakService();
     MatRadioModule,
     FormsModule,
     MatMenuModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
+      
       provide: KeycloakService,
       useValue: keycloakService,
     },
