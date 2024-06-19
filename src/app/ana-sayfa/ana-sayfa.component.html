@@ -18,6 +18,8 @@
             <li><a class="dropdown-item" routerLink="/profil-kayit">Hedefler</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" routerLink="/to-do-list">Yapılcaklar</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/ogrenci">Öğrenci</a></li>
           </ul>
         </li>
       </ul>
@@ -30,28 +32,47 @@
     </div>
   </div>
 </nav>
-<br>
-<br>
+
+<br><br>
+
 <div class="container mb-5">
   <h2>Ders Programları</h2>
-  <div class="row">
-    <div class="col-md-4" *ngFor="let program of dersProgramlari">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Ders Programı ID: {{program.dersProgramiID}}</h5>
-          <p class="card-text">Günlük Çalışma Saati: {{program.gunlukCalismaSaati}}</p>
-          <p class="card-text">Haftada Çalışılacak Gün Sayısı: {{program.haftadaCalisilacakGunSayisi}}</p>
-          <h6 class="card-subtitle mb-2 text-muted">Konular:</h6>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item" *ngFor="let konu of konuBilgileri">
-              {{ konu.konuIsmi }}
-            </li>
-          </ul>
+  
+  <!-- Ders Programları Carousel -->
+  <div id="dersProgramlariCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let program of dersProgramlari; let i = index" [class.active]="i === 0">
+        <div class="row">
+          <div class="col-md-3" *ngFor="let program of dersProgramlari.slice(i * 4, (i * 4) + 4)">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Ders Programı ID: {{program.dersProgramiID}}</h5>
+                <p class="card-text">Günlük Çalışma Saati: {{program.gunlukCalismaSaati}}</p>
+                <p class="card-text">Haftada Çalışılacak Gün Sayısı: {{program.haftadaCalisilacakGunSayisi}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">Konular:</h6>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" *ngFor="let konu of konuBilgileri">
+                    {{ konu.konuIsmi }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Carousel Kontrolleri -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#dersProgramlariCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#dersProgramlariCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sonraki</span>
+    </button>
   </div>
-
+  
   <h2>Öğrenci Bilgileri</h2>
   <table class="table table-striped custom-table mb-5">
     <thead>

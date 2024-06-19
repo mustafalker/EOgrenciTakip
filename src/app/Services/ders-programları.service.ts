@@ -8,7 +8,7 @@ import { DersProgrami } from '../Model/DersProgrami';
   providedIn: 'root'
 })
 export class DersProgramlariService {
-  private apiUrl = 'https://localhost:7125/api/DersProgramis';  // API URL'inizi buraya yazın
+  private apiUrl = 'https://localhost:7125/api/DersProgramis'; 
 
   constructor(private http: HttpClient) { }
 
@@ -49,7 +49,12 @@ export class DersProgramlariService {
       catchError(this.handleError)
     );
   }
-
+  searchDersProgramlari(alanID: string, minHedef: number, maxHedef: number): Observable<DersProgrami[]> {
+    const url = `${this.apiUrl}/ara?alanID=${alanID}&minHedef=${minHedef}&maxHedef=${maxHedef}`;
+    return this.http.get<DersProgrami[]>(url).pipe(
+      catchError(this.handleError)
+    );
+  }
   // Error handling
   private handleError(error: any) {
     console.error('An error occurred', error);

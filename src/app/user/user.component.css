@@ -1,17 +1,91 @@
-.mt-5{
-    margin-top: 500px;
+/* Navbar styles */
+.navbar-brand {
+  font-weight: bold;
+  color: #4caf50;
 }
-td {
-    max-width: 70px; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    cursor: pointer; 
-  }
-  
-  .expanded {
-    max-width: none; 
-    white-space: normal; 
-    overflow: visible; 
-    text-overflow: clip; 
-  }
+
+.btn-outline-success {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+.btn-outline-success:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Container and card styles */
+.container {
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.custom-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 0 15px; /* Add some spacing between rows */
+}
+
+.custom-table thead th {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+}
+
+.custom-table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #e6ffe6;
+}
+
+.custom-table th,
+.custom-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Responsive table */
+.custom-table td {
+  max-width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.custom-table td.expanded {
+  max-width: none;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Message for no user */
+.no-user-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Adding some margin for top elements */
+.mt-5 {
+  margin-top: 30px;
+}

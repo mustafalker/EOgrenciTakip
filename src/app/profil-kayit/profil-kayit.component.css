@@ -1,0 +1,39 @@
+.container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        mat-form-field {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        
+        button {
+          display: block;
+          width: 100%;
+        }
+        
+        .alert {
+          margin-top: 20px;
+        }
+        
+        table {
+          width: 100%;
+          margin-top: 20px;
+        }
+        
+        table, th, td {
+          border: 1px solid #ddd;
+          border-collapse: collapse;
+        }
+        
+        th, td {
+          padding: 8px;
+          text-align: left;
+        }
+        
+        th {
+          background-color: #f2f2f2;
+        }
+        
