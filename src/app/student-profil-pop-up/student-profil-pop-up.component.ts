@@ -24,8 +24,8 @@ export class StudentProfilPopUpComponent implements OnInit {
       ad: ['', Validators.required],
       soyad: ['', Validators.required],
       alan: ['', Validators.required],
-      minHedef: [0, [Validators.required, Validators.min(1)]],
-      maxHedef: [0, [Validators.required, Validators.min(1)]]
+      minHedef: [, [Validators.required, Validators.min(0)]],
+      maxHedef: [, [Validators.required, Validators.min(1)]]
     });
   }
 

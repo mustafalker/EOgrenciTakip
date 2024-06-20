@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import FormBuilder and Validators
+import { Router } from '@angular/router'; // Import Router for navigation
 import { DersProgrami } from '../Model/DersProgrami';
 import { DersProgramlariService } from '../Services/ders-programları.service';
 
@@ -9,17 +10,31 @@ import { DersProgramlariService } from '../Services/ders-programları.service';
   styleUrls: ['./profil-kayit.component.css']
 })
 export class ProfilKayitComponent {
+  searchForm: FormGroup;
   alanID: string = '';
   minHedef: number | null = null;
   maxHedef: number | null = null;
   dersProgramlari: DersProgrami[] = [];
   errorMessage: string = '';
 
-  constructor(private dersProgramlariService: DersProgramlariService) {}
+  constructor(
+    private fb: FormBuilder,
+    private dersProgramlariService: DersProgramlariService,
+    private router: Router
+  ) {
+    this.searchForm = this.fb.group({
+      alanID: ['', Validators.required],
+      minHedef: [null, [Validators.required, Validators.min(0)]],
+      maxHedef: [null, [Validators.required, Validators.min(1)]]
+    });
+  }
+
+  ngOnInit() { }
 
   search() {
-    if (this.alanID && this.minHedef !== null && this.maxHedef !== null) {
-      this.dersProgramlariService.searchDersProgramlari(this.alanID, this.minHedef, this.maxHedef)
+    if (this.searchForm.valid) {
+      const { alanID, minHedef, maxHedef } = this.searchForm.value;
+      this.dersProgramlariService.searchDersProgramlari(alanID, minHedef, maxHedef)
         .subscribe(
           (data) => {
             this.dersProgramlari = data;
@@ -32,5 +47,9 @@ export class ProfilKayitComponent {
     } else {
       this.errorMessage = 'Lütfen tüm alanları doldurun.';
     }
+  }
+
+  goBack() {
+    this.router.navigate(['/ana-sayfa']); 
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { DersProgrami } from '../Model/DersProgrami';
 
 @Injectable({
@@ -49,12 +49,14 @@ export class DersProgramlariService {
       catchError(this.handleError)
     );
   }
+
   searchDersProgramlari(alanID: string, minHedef: number, maxHedef: number): Observable<DersProgrami[]> {
     const url = `${this.apiUrl}/ara?alanID=${alanID}&minHedef=${minHedef}&maxHedef=${maxHedef}`;
     return this.http.get<DersProgrami[]>(url).pipe(
       catchError(this.handleError)
     );
   }
+
   // Error handling
   private handleError(error: any) {
     console.error('An error occurred', error);

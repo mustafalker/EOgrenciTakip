@@ -1,0 +1,76 @@
+/* Container Styling */
+.container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #e6f5e6;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Card Styling */
+        .card {
+          margin-bottom: 20px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+        }
+        
+        .card-body {
+          padding: 20px;
+        }
+        
+        .card-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #2e7d32;
+        }
+        
+        .card-subtitle {
+          font-size: 1.2rem;
+          color: #1b5e20;
+        }
+        
+        .list-group-item {
+          font-size: 1rem;
+          padding: 0.75rem 1.25rem;
+          background-color: #f1f8e9;
+          border: none;
+        }
+        
+        .list-group-item:nth-child(odd) {
+          background-color: #e8f5e9;
+        }
+        
+        /* Button Styling */
+        .btn-secondary {
+          font-size: 1rem;
+          background-color: #388e3c;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+          background-color: #2e7d32;
+        }
+        
+        /* Heading Styling */
+        h2 {
+          color: #1b5e20;
+        }
+        
+        h3 {
+          color: #2e7d32;
+          margin-top: 20px;
+        }
+        
+        /* Miscellaneous */
+        .shadow-sm {
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        

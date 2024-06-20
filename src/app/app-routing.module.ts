@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/ana-sayfa', pathMatch: 'full' },
   { path: 'ana-sayfa', component: AnaSayfaComponent },
   { path: 'user', component: UserComponent, canActivate: [AuthGuard] },
-  { path: 'to-do-list', component: ToDoListComponent},
-  { path: 'profil-kayit', component: ProfilKayitComponent,},
+  { path: 'to-do-list/:id', component: ToDoListComponent },
+  { path: 'dersprogramlari', component: ProfilKayitComponent,},
   { path: 'ogrenci', component: OgrenciComponent,},
 ];
 

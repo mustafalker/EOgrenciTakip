@@ -1,39 +1,101 @@
+/* profil-kayit.component.css */
+
+/* Container styling */
 .container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-        
-        mat-form-field {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-        
-        button {
-          display: block;
-          width: 100%;
-        }
-        
-        .alert {
-          margin-top: 20px;
-        }
-        
-        table {
-          width: 100%;
-          margin-top: 20px;
-        }
-        
-        table, th, td {
-          border: 1px solid #ddd;
-          border-collapse: collapse;
-        }
-        
-        th, td {
-          padding: 8px;
-          text-align: left;
-        }
-        
-        th {
-          background-color: #f2f2f2;
-        }
-        
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Soft background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form label and input styling */
+.form-label {
+  color: #388e3c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border: 1px solid #388e3c;
+  border-radius: 4px;
+  padding: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button styling */
+button {
+  font-size: 1.25em;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.btn-success:hover {
+  background-color: #388e3c;
+  border-color: #388e3c;
+}
+
+.btn-secondary {
+  background-color: #757575;
+  border-color: #757575;
+}
+
+.btn-secondary:hover {
+  background-color: #616161;
+  border-color: #616161;
+}
+
+/* Alert styling */
+.alert {
+  margin-top: 20px;
+  border: 1px solid #f44336;
+  background-color: #ffebee;
+  color: #f44336;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Table styling */
+.table-green thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+.table-green tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+.table-bordered {
+  border: 1px solid #4caf50;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e0f7fa;
+}
+
+/* Text color class */
+.text-green {
+  color: #388e3c;
+}
